@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Button } from "./ui/button";
 import {
   HeartIcon,
@@ -9,6 +8,7 @@ import {
   LogOutIcon,
   MenuIcon,
   ScrollTextIcon,
+  ShoppingBag,
 } from "lucide-react";
 import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
@@ -31,14 +31,10 @@ const Header = () => {
   return (
     <div className="flex justify-between px-5 pt-6">
       <Link href="/">
-        <div className="relative h-[30px] w-[100px]">
-          <Image
-            src="/logo.png"
-            alt="FSW Foods"
-            sizes="100%"
-            fill
-            className="object-cover"
-          />
+        <div className="flex h-[30px] w-[150px]">
+          <ShoppingBag className="mr-2" /> <b className="text-red-600">FOOD</b>{" "}
+          LOGO
+          <h1 className="text-2xl"></h1>
         </div>
       </Link>
 
